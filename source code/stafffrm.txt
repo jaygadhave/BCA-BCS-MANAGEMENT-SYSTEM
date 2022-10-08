@@ -1,0 +1,59 @@
+Private Sub Form_Load()
+Combo1.AddItem "FY-(BBA(CA))"
+Combo1.AddItem "SY-(BBA(CA))"
+Combo1.AddItem "TY-(BBA(CA))"
+
+Combo3.AddItem "MALE"
+Combo3.AddItem "FEMALE"
+display
+End Sub
+Sub display()
+txtid.Text = Adodc1.Recordset.Fields("StaffID")
+txtname.Text = Adodc1.Recordset.Fields("Name")
+Combo3.Text = Adodc1.Recordset.Fields("Gender")
+Combo1.Text = Adodc1.Recordset.Fields("Course")
+Combo2.Text = Adodc1.Recordset.Fields("Subject")
+txtemail.Text = Adodc1.Recordset.Fields("Email")
+txtaadhar.Text = Adodc1.Recordset.Fields("AadharNo")
+txtaddress.Text = Adodc1.Recordset.Fields("Address")
+txtphone.Text = Adodc1.Recordset.Fields("Phone")
+End Sub
+Private Sub lastbtn_Click()
+Adodc1.Recordset.MoveLast
+End Sub
+
+Private Sub nextbtn_Click()
+Adodc1.Recordset.MoveNext
+End Sub
+
+Private Sub previousbtn_Click()
+Adodc1.Recordset.MovePrevious
+End Sub
+
+Private Sub savebtn_Click()
+Adodc1.Recordset.Fields("StaffID") = txtid.Text
+Adodc1.Recordset.Fields("Name") = txtname.Text
+Adodc1.Recordset.Fields("Gender") = Combo3.Text
+Adodc1.Recordset.Fields("Course") = Combo1.Text
+Adodc1.Recordset.Fields("Subject") = Combo2.Text
+Adodc1.Recordset.Fields("Email") = txtemail.Text
+Adodc1.Recordset.Fields("AadharNo") = txtaadhar.Text
+Adodc1.Recordset.Fields("Address") = txtaddress.Text
+Adodc1.Recordset.Fields("Phone") = txtphone.Text
+MsgBox "Data is Saved successfully ..!!!", vbInformation
+Adodc1.Recordset.Update
+End Sub
+
+Private Sub updatebtn_Click()
+Adodc1.Recordset.Fields("StaffID") = txtid.Text
+Adodc1.Recordset.Fields("Name") = txtname.Text
+Adodc1.Recordset.Fields("Gender") = Combo3.Text
+Adodc1.Recordset.Fields("Course") = Combo1.Text
+Adodc1.Recordset.Fields("Subject") = Combo2.Text
+Adodc1.Recordset.Fields("Email") = txtemail.Text
+Adodc1.Recordset.Fields("AadharNo") = txtaadhar.Text
+Adodc1.Recordset.Fields("Address") = txtaddress.Text
+Adodc1.Recordset.Fields("Phone") = txtphone.Text
+MsgBox "Data is updated successfully ..!!!", vbInformation
+Adodc1.Recordset.Update
+End Sub

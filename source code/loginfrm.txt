@@ -1,0 +1,20 @@
+Private Sub cancelbtn_Click()
+End
+End Sub
+
+Private Sub Form_Load()
+
+End Sub
+
+Private Sub loginbtn_Click()
+loginado.RecordSource = "select * from login where username='" + txtuser.Text + "' and Password='" + txtpass.Text + "'"
+loginado.Refresh
+If loginado.Recordset.EOF Then
+MsgBox "Login Failed, Try again....!!!", vbCritical, "please enter correct username and password"
+Else
+MsgBox "Login successful.", vbInformation, "Successful attempt"
+BCAMDI.Show
+loginfrm.Hide
+End If
+End Sub
+

@@ -1,0 +1,23 @@
+Private Sub addmission_Click()
+Addmissionfrm.Show
+BCAMDI.Hide
+End Sub
+
+Private Sub Exit_Click()
+loginfrm.Show
+BCAMDI.Hide
+End Sub
+
+Private Sub MDIForm_Load()
+
+End Sub
+
+Private Sub Reports_Click()
+reportfrm.Show
+BCAMDI.Hide
+End Sub
+
+Private Sub staffs_Click()
+stafffrm.Show
+BCAMDI.Hide
+End Sub

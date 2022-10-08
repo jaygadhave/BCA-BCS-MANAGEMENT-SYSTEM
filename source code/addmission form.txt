@@ -1,0 +1,95 @@
+Private Sub addbtn_Click()
+Adodc1.Recordset.AddNew
+End Sub
+
+Private Sub cancelbtn_Click()
+Addmissionfrm.Hide
+BCAMDI.Show
+End Sub
+
+Private Sub Combo1_Click()
+Combo2.Clear
+If Combo1.Text = "BBA-(Computer Application)" Then
+Combo2.AddItem "FY(BCA)"
+Combo2.AddItem "SY(BCA)"
+Combo2.AddItem "TY(BCA)"
+ElseIf Combo1.Text = "BSC-(Computer Science)" Then
+Combo2.AddItem "FY(BCS)"
+Combo2.AddItem "SY(BCS)"
+Combo2.AddItem "TY(BCS)"
+Else
+End If
+End Sub
+
+Private Sub deletebtn_Click()
+confirm = MsgBox("do you want to delete student record", vbYesNo + vbCritical, "Deletion Confirmation")
+If confirm = vbYes Then
+Adodc1.Recordset.Delete
+MsgBox "record has been deleted successfully", vbInformation, "message"
+Else
+MsgBox "Record not deleted...!!", vbInformation, "message"
+End If
+End Sub
+
+Private Sub firstbtn_Click()
+Adodc1.Recordset.MoveFirst
+End Sub
+
+Private Sub Form_Load()
+Combo1.AddItem "BBA-(Computer Application)"
+Combo1.AddItem "BSC-(Computer Science)"
+
+Combo3.AddItem "MALE"
+Combo3.AddItem "FEMALE"
+display
+End Sub
+Sub display()
+txtroll.Text = Adodc1.Recordset.Fields("RollNo")
+txtname.Text = Adodc1.Recordset.Fields("Name")
+DTPicker1.Value = Adodc1.Recordset.Fields("DOB")
+Combo3.Text = Adodc1.Recordset.Fields("Gender")
+Combo1.Text = Adodc1.Recordset.Fields("Department")
+Combo2.Text = Adodc1.Recordset.Fields("Year")
+txtaddress.Text = Adodc1.Recordset.Fields("Address")
+txtphone.Text = Adodc1.Recordset.Fields("PhoneNO")
+End Sub
+Private Sub lastbtn_Click()
+Adodc1.Recordset.MoveLast
+End Sub
+
+Private Sub nextbtn_Click()
+Adodc1.Recordset.MoveNext
+End Sub
+
+Private Sub previousbtn_Click()
+Adodc1.Recordset.MovePrevious
+End Sub
+
+Private Sub savebtn_Click()
+Adodc1.Recordset.Fields("RollNo") = txtroll.Text
+Adodc1.Recordset.Fields("Name") = txtname.Text
+Adodc1.Recordset.Fields("DOB") = DTPicker1.Value
+Adodc1.Recordset.Fields("Gender") = Combo3.Text
+Adodc1.Recordset.Fields("Department") = Combo1.Text
+Adodc1.Recordset.Fields("Year") = Combo2.Text
+Adodc1.Recordset.Fields("Address") = txtaddress.Text
+Adodc1.Recordset.Fields("PhoneNO") = txtphone.Text
+MsgBox "Data is updated successfully ..!!!", vbInformation
+Adodc1.Recordset.Update
+End Sub
+
+Private Sub updatebtn_Click()
+Adodc1.Recordset.Fields("RollNo") = txtroll.Text
+Adodc1.Recordset.Fields("Name") = txtname.Text
+Adodc1.Recordset.Fields("DOB") = DTPicker1.Value
+Adodc1.Recordset.Fields("Gender") = Combo3.Text
+Adodc1.Recordset.Fields("Department").Value = Combo1.Text
+Adodc1.Recordset.Fields("Year").Value = Combo2.Text
+Adodc1.Recordset.Fields("Address").Value = txtaddress.Text
+Adodc1.Recordset.Fields("PhoneNo").Value = txtphone.Text
+MsgBox "Data is updated successfully ..!!!", vbInformation
+Adodc1.Recordset.Update
+End Sub
+
+
+

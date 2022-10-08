@@ -1,0 +1,227 @@
+Private Sub Combo2_Click()
+If Combo2.Text = "TY-BCA" Then
+Text3.Text = 80
+Text4.Text = 5600
+Text5.Text = 1000
+Text6.Text = 3400
+Text7.Text = 1000
+Text8.Text = 1100
+Text9.Text = 80
+Text10.Text = 1000
+Text11.Text = 50
+Text12.Text = 50
+Text13.Text = 80
+Text14.Text = 850
+Text15.Text = 80
+Text16.Text = 2250
+Text17.Text = 50
+Text18.Text = 280
+Text19.Text = 3000
+Text20.Text = 2500
+Text21.Text = 3500
+Text22.Text = 50
+Text23.Text = 1000
+Text24.Text = Val(Text1.Text) + Val(Text2.Text) + Val(Text3.Text) + Val(Text4.Text) + Val(Text5.Text) + Val(Text6.Text) + Val(Text7.Text) + Val(Text8.Text) + Val(Text9.Text) + Val(Text10.Text) + Val(Text11.Text) + Val(Text12.Text) + Val(Text13.Text) + Val(Text14.Text) + Val(Text15.Text) + Val(Text16.Text) + Val(Text17.Text) + Val(Text18.Text) + Val(Text19.Text) + Val(Text20.Text) + Val(Text21.Text) + Val(Text22.Text) + Val(Text23.Text)
+ElseIf Combo2.Text = "SY-BCA" Then
+Text3.Text = 80
+Text4.Text = 3600
+Text5.Text = 1000
+Text6.Text = 3400
+Text7.Text = 1000
+Text8.Text = 1100
+Text9.Text = 395
+Text10.Text = 1000
+Text11.Text = 50
+Text12.Text = 50
+Text13.Text = 80
+Text14.Text = 400
+Text15.Text = 80
+Text16.Text = 2250
+Text17.Text = 50
+Text18.Text = 100
+Text19.Text = 3000
+Text20.Text = 2500
+Text21.Text = 3500
+Text22.Text = 364
+Text23.Text = 1000
+Text24.Text = Val(Text1.Text) + Val(Text2.Text) + Val(Text3.Text) + Val(Text4.Text) + Val(Text5.Text) + Val(Text6.Text) + Val(Text7.Text) + Val(Text8.Text) + Val(Text9.Text) + Val(Text10.Text) + Val(Text11.Text) + Val(Text12.Text) + Val(Text13.Text) + Val(Text14.Text) + Val(Text15.Text) + Val(Text16.Text) + Val(Text17.Text) + Val(Text18.Text) + Val(Text19.Text) + Val(Text20.Text) + Val(Text21.Text) + Val(Text22.Text) + Val(Text23.Text)
+ElseIf Combo2.Text = "FY-BCA" Then
+Text3.Text = 80
+Text4.Text = 3600
+Text5.Text = 1000
+Text6.Text = 1400
+Text7.Text = 1000
+Text8.Text = 1100
+Text9.Text = 395
+Text10.Text = 1000
+Text11.Text = 50
+Text12.Text = 50
+Text13.Text = 80
+Text14.Text = 400
+Text15.Text = 80
+Text16.Text = 2250
+Text17.Text = 50
+Text18.Text = 100
+Text19.Text = 3000
+Text20.Text = 2500
+Text21.Text = 3500
+Text22.Text = 364
+Text23.Text = 1000
+Text24.Text = Val(Text1.Text) + Val(Text2.Text) + Val(Text3.Text) + Val(Text4.Text) + Val(Text5.Text) + Val(Text6.Text) + Val(Text7.Text) + Val(Text8.Text) + Val(Text9.Text) + Val(Text10.Text) + Val(Text11.Text) + Val(Text12.Text) + Val(Text13.Text) + Val(Text14.Text) + Val(Text15.Text) + Val(Text16.Text) + Val(Text17.Text) + Val(Text18.Text) + Val(Text19.Text) + Val(Text20.Text) + Val(Text21.Text) + Val(Text22.Text) + Val(Text23.Text)
+
+
+Else
+End If
+
+End Sub
+
+
+Private Sub Command1_Click()
+Adodc1.Recordset.AddNew
+lbltime.Caption = Format(Date, "dd-mm-yyyy")
+Label36.Caption = "BBA-(CA)"
+End Sub
+
+Private Sub Command2_Click()
+BCAfeesfrm.Hide
+BCAMDI.Show
+
+End Sub
+
+Private Sub Command3_Click()
+Text25.Text = Val(Text25.Text) + Val(Text27.Text)
+Adodc1.Recordset.Update
+Label34.Caption = Text1.Text
+Label35.Caption = Text2.Text
+Label37.Caption = Combo2.Text
+Label38.Caption = Combo3.Text
+Label39.Caption = Text3.Text
+Label40.Caption = Text4.Text
+Label41.Caption = Text5.Text
+Label42.Caption = Text6.Text
+Label43.Caption = Text7.Text
+Label44.Caption = Text8.Text
+Label45.Caption = Text9.Text
+Label46.Caption = Text10.Text
+Label47.Caption = Text11.Text
+Label48.Caption = Text12.Text
+Label49.Caption = Text13.Text
+Label50.Caption = Text14.Text
+Label51.Caption = Text15.Text
+Label52.Caption = Text16.Text
+Label53.Caption = Text17.Text
+Label54.Caption = Text18.Text
+Label55.Caption = Text19.Text
+Label56.Caption = Text20.Text
+Label57.Caption = Text21.Text
+Label58.Caption = Text22.Text
+Label59.Caption = Text23.Text
+Label60.Caption = Combo4.Text
+Label62.Caption = Text27.Text
+Label63.Caption = Text24.Text
+Label64.Caption = Text26.Text
+Label65.Caption = Text25.Text
+Text1.Visible = False
+Text2.Visible = False
+Combo2.Visible = False
+Combo3.Visible = False
+Text3.Visible = False
+Text4.Visible = False
+Text5.Visible = False
+Text6.Visible = False
+Text7.Visible = False
+Text8.Visible = False
+Text9.Visible = False
+Text10.Visible = False
+Text11.Visible = False
+Text12.Visible = False
+Text13.Visible = False
+Text14.Visible = False
+Text15.Visible = False
+Text16.Visible = False
+Text17.Visible = False
+Text18.Visible = False
+Text19.Visible = False
+Text20.Visible = False
+Text21.Visible = False
+Text22.Visible = False
+Text23.Visible = False
+Combo4.Visible = False
+Text27.Visible = False
+Text24.Visible = False
+Text26.Visible = False
+Text25.Visible = False
+Command1.Visible = False
+Command2.Visible = False
+Command3.Visible = False
+Command4.Visible = False
+firstbtn.Visible = False
+lastbtn.Visible = False
+nextbtn.Visible = False
+previousbtn.Visible = False
+DataGrid1.Visible = False
+CommonDialog1.ShowPrinter
+
+End Sub
+
+Private Sub Command4_Click()
+Text25.Text = Val(Text25.Text) + Val(Text27.Text)
+Adodc1.Recordset.Update
+MsgBox "updated successfully"
+End Sub
+
+Private Sub Command5_Click()
+BCAMDI.Show
+BCAfeesfrm.Hide
+End Sub
+
+Private Sub firstbtn_Click()
+Adodc1.Recordset.MoveFirst
+End Sub
+
+Private Sub Form_Load()
+lbltime.Caption = Format(Date, "dd-mm-yyyy")
+Label36.Caption = "BBA-(CA)"
+
+Combo2.AddItem "FY-BCA"
+Combo2.AddItem "SY-BCA"
+Combo2.AddItem "TY-BCA"
+
+Combo3.AddItem "Non-Grant"
+Combo3.AddItem "Grant"
+
+Combo4.AddItem "YES"
+Combo4.AddItem "NO"
+display
+End Sub
+Sub display()
+Text1.Text = Adodc1.Recordset.Fields("rollNo")
+Text2.Text = Adodc1.Recordset.Fields("Name")
+Combo2.Text = Adodc1.Recordset.Fields("Year")
+lbltime.Caption = Adodc1.Recordset.Fields("Date")
+Combo3.Text = Adodc1.Recordset.Fields("type")
+Text25.Text = Adodc1.Recordset.Fields("Paidfees")
+Text26.Text = Adodc1.Recordset.Fields("pending")
+End Sub
+
+Private Sub lastbtn_Click()
+Adodc1.Recordset.MoveLast
+End Sub
+
+Private Sub nextbtn_Click()
+Adodc1.Recordset.MoveNext
+End Sub
+
+Private Sub previousbtn_Click()
+Adodc1.Recordset.MovePrevious
+End Sub
+
+Private Sub Text25_Change()
+Text26.Text = Val(Text24.Text) - Val(Text25.Text)
+End Sub
+
+Private Sub Text27_change()
+Text26.Text = Val(Text24.Text) - Val(Text25.Text)
+End Sub
+
+
